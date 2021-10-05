@@ -4,7 +4,7 @@ let lowerCaseWords = (input) => {
     let promise = new Promise((resolve , reject) => {
         if(input.length != 0){
             for(i of input){
-                if(typeof i == 'string'){
+                if(isNaN(i) && typeof i != 'boolean'){
                     output.push(i.toLowerCase());
                     resolve(output);
                 }
